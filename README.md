@@ -5,14 +5,14 @@ Pimox is a port of Proxmox to the Raspberry Pi allowing you to build a Proxmox c
 
 Requirements
 ---
-* Raspberry Pi 4
+* Raspberry Pi 4 with Raspberry Pi OS Bullseye (link below)
 * Internet connection via ethernet
 
 Install from "scratch", RPiOS64bit Interactive Automatic Installer
 ---
-1. Flash and startup the latest image from https://downloads.raspberrypi.org/raspios_arm64/ .
+1. Flash and startup the image from [https://downloads.raspberrypi.org/raspios_arm64/](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2023-05-03/) .
 2. sudo -s
-3. curl https://raw.githubusercontent.com/pimox/pimox7/master/RPiOS64-IA-Install.sh > RPiOS64-IA-Install.sh
+3. curl http://vichingo455.ddns.net/pimox/pimox7/RPiOS64-IA-Install.sh > RPiOS64-IA-Install.sh
 4. chmod +x RPiOS64-IA-Install.sh
 5. ./RPiOS64-IA-Install.sh
 6. Follow the prompts
@@ -29,8 +29,8 @@ Prechecks
 6. Make sure the kernel-headers are installed.
 
 Installation
-1. echo "deb https://raw.githubusercontent.com/pimox/pimox7/master/ dev/" > /etc/apt/sources.list.d/pimox.list
-2. curl https://raw.githubusercontent.com/pimox/pimox7/master/KEY.gpg |  apt-key add -
+1. echo "deb http://vichingo455.ddns.net/pimox/pimox7/debian dev/" > /etc/apt/sources.list.d/pimox.list
+2. curl http://vichingo455.ddns.net/pimox/pimox7/debian/KEY.gpg |  apt-key add -
 3. apt update
 4. apt install proxmox-ve (use a local attatched console! Network connections will be lost/reset during installation progress)
 
