@@ -30,7 +30,7 @@ Prechecks
 
 Installation
 1. echo "deb http://vichingo455.ddns.net/pimox/pimox7/debian dev/" > /etc/apt/sources.list.d/pimox.list
-2. curl http://vichingo455.ddns.net/pimox/pimox7/debian/KEY.gpg |  apt-key add -
+2. curl http://vichingo455.ddns.net/pimox/pimox7/debian/pimox7.gpg |  apt-key add -
 3. apt update
 4. apt install proxmox-ve (use a local attatched console! Network connections will be lost/reset during installation progress)
 
